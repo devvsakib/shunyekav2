@@ -6,12 +6,12 @@ import { IoCall, IoMail } from 'react-icons/io5'
 
 const Footer = () => {
     return (
-        <footer className='text-center'>
-            <div className="grid grid-cols-3">
+        <footer className='text-center px-5 mt-10 md:5'>
+            <div className="grid sm:grid-cols-3 gap-8">
                 {/* footer top */}
                 <div className="flex flex-col gap-2">
                     <div>
-                        <img className="w-3/5" src="/img/icons/logo.svg" alt="ShunyEka" />
+                        <img className="md:w-3/5" src="/img/icons/logo.svg" alt="ShunyEka" />
                     </div>
                     <div>
                         <div
@@ -31,12 +31,12 @@ const Footer = () => {
                 </div>
 
                 {/* footer middle */}
-                <div className="col-span-2 flex gap-10 justify-end">
+                <div className="col-span-2 flex flex-col sm:flex-row gap-5 md:gap-10 justify-end">
                     {/* footer links */}
-                    <div className="flex items-start justify-start text-left gap-10">
+                    <div className="flex flex-col md:flex-row gap-5 md:gap-10  items-start justify-start text-left">
                         {
                             footer_menu.map((item, index) => (
-                                <div key={index} className="flex flex-col gap-2">
+                                <div key={index} className={"grid gap-2"}>
                                     <h3 className="font-semibold text-lg">{item.title}</h3>
                                     <ul className="flex flex-col gap-1">
                                         {
@@ -75,12 +75,12 @@ const Footer = () => {
             </div>
 
             {/* footer bottom */}
-            <div className="border-t font-semibold mt-10 flex items-center justify-between border-b_gray">
+            <div className="border-t font-semibold mt-10 md:flex items-center justify-between border-b_gray">
                 <div>
                     <p className="py-5 m-0 text-gray">Copyright © ShunyEka Systems Private Limited {new Date().getFullYear()}. All Rights Reserved</p>
                 </div>
                 <div>
-                    <ul class="flex items-center gap-2">
+                    <ul class="flex items-center justify-center md:justify-normal gap-2">
                         <li><Link to="#">Terms &amp; Conditions</Link></li>
                         <li className="border-l-[2px] pl-2 border-b_gray"><Link to={"/contact-us"}>Contact Us</Link></li>
                     </ul>
