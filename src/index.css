@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('fonts/CircularStd-Book.otf');
+}
+
+.CircularStd-Book {
+    font-family: 'Circular Std Book';
+}
+
+@font-face {
+    font-family: 'Circular Std Book Italic';
+    src: url('fonts/CircularStd-BookItalic.otf');
+}
+
+.CircularStd-BookItalic {
+    font-family: 'Circular Std Book Italic';
+}
+
+@font-face {
+    font-family: 'Circular Std Medium';
+    src: url('fonts/CircularStd-Medium.otf');
+}
+
+.CircularStd-Medium {
+    font-family: 'Circular Std Medium' !important;
+}
+
+@font-face {
+    font-family: 'Circular Std Bold';
+    src: url('fonts/CircularStd-Bold.otf');
+}
+
+.CircularStd-Bold {
+    font-family: 'Circular Std Bold';
+}
+
+/*Gilroy fonts*/
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('fonts/Gilroy-Bold.ttf');
+}
+
+.Gilroy-Bold {
+    font-family: 'Gilroy Bold';
+}
+
+body {
+  overflow-x: hidden;
+    color: #2c3d46;
+}
+
+.contactBtn::after{
+    width: 0;
+    background: #168ccc;
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.25rem;
+    
+}
+.contactBtn:hover::after{
+    width: 100%;
+}
