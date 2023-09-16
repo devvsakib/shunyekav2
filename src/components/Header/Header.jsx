@@ -1,41 +1,98 @@
-import { Link } from "react-router-dom"
-import { main_menu } from '../../data/menus'
-import { IoCall } from 'react-icons/io5'
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { main_menu } from "../../data/menus";
+import { IoCall, IoClose } from "react-icons/io5";
+import { HiMenuAlt3 } from "react-icons/hi";
+import ActiveLink from "./ActiveLink";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Header = () => {
+    const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navbarRef = useRef();
+    const { width } = useWindowSize();
+    console.log(width);
+    useEffect(() => {
+        const handleScroll = () => {
+            const pageYOffset = window.scrollY > 45;
+
+            if (pageYOffset) setIsNavbarFixed(true);
+            else setIsNavbarFixed(false);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
     return (
-        <header className="flex flex-col md:flex-row justify-between items-center py-3">
-            <div>
-                <Link to={"/"}>
-                    <img src="/img/icons/logo.svg" alt="logo" className="w-3/5" />
-                </Link>
-            </div>
-            <nav className="flex gap-5 CircularStd-Medium items-center flex-col md:flex-row">
-                {/* Render the menu using main_menu */}
-                {main_menu.map((item, index) => (
-                    <Link to={item.link} key={index}>
-                        {item.name}
+
+        <header
+            ref={navbarRef}
+            className={`${isNavbarFixed ? " bg-white w-full" : " w-full"
+                } duration-300 ease-linear fixed top-0 left-0 px-5 right-0`}
+        >
+            <div className="flex flex-row justify-between items-center py-3 max-w-[1240px] mx-auto">
+                <div>
+                    <Link to={"/"}>
+                        <img src="/img/icons/logo.svg" alt="logo" className="w-3/5" />
                     </Link>
-                ))}
-                <Link to={"tel:+91-927-680-9744"}
-                    className="flex gap-2 items-center"
-                >
-                    <IoCall />
-                    <span>
-                        +91-927-680-9744
-                    </span>
-                </Link>
+                </div>
+                {
+                    width <= 768 &&
+                    <div>
+                        {
+                            isMenuOpen ?
+                                <IoClose onClick={e => setIsMenuOpen(!isMenuOpen)} className="text-3xl cursor-pointer text-primary" />
+                                :
+                                <HiMenuAlt3 onClick={e => setIsMenuOpen(!isMenuOpen)} className="text-3xl cursor-pointer" />
+                        }
+                    </div>
+                }
+                <nav className="hidden md:flex gap-5 CircularStd-Medium items-center flex-col md:flex-row">
+                    {main_menu.map((item, index) => (
+                        <ActiveLink links={item} key={index} />
+                    ))}
+                    <Link to={"tel:+91-927-680-9744"} className="flex gap-1 items-center">
+                        <IoCall className="text-primary" />
+                        <span>+91-927-680-9744</span>
+                    </Link>
 
-                <Link to={"/contact-us"}
-                    className="bg-primary px-5 py-2 rounded-md text-white relative "
-                >
-                    <p style={{ zIndex: 99}} className="contactBtn">
-                        Contact Us
-                    </p>
-                </Link>
-            </nav>
+                    <Link
+                        to={"/contact-us"}
+                        className="bg-primary hover:bg-secondary duration-200 ease-linear px-5 py-2 rounded-md text-white relative"
+                    >
+                        <p>Contact Us</p>
+                    </Link>
+                </nav>
+                {
+                    width <= 768 && isMenuOpen &&
+                    <nav className="flex absolute top-14 w-full h-screen bg-white left-0 gap-5 CircularStd-Medium pt-10 items-start px-10 flex-col md:flex-row"
+                    >
+                        {main_menu.map((item, index) => (
+                            <span onClick={e => setIsMenuOpen(!isMenuOpen)}>
+                                <ActiveLink links={item} key={index} />
+                            </span>
+                        ))}
+                        <Link to={"tel:+91-927-680-9744"} className="flex gap-1 items-center">
+                            <IoCall className="text-primary" />
+                            <span>+91-927-680-9744</span>
+                        </Link>
+
+                        <Link
+                            to={"/contact-us"}
+                            className="bg-primary hover:bg-secondary duration-200 ease-linear px-5 py-2 rounded-md text-white relative"
+                            onClick={e => setIsMenuOpen(!isMenuOpen)}
+                        >
+                            <p>Contact Us</p>
+                        </Link>
+                    </nav>
+                }
+            </div>
+
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

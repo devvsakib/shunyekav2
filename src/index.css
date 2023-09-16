@@ -52,20 +52,3 @@ body {
   overflow-x: hidden;
     color: #2c3d46;
 }
-
-.contactBtn::after{
-    width: 0;
-    background: #168ccc;
-    content: "";
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-    transition: all 0.2s ease-in-out;
-    border-radius: 0.25rem;
-    
-}
-.contactBtn:hover::after{
-    width: 100%;
-}
