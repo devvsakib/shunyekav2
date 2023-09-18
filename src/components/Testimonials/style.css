@@ -1,0 +1,20 @@
+#customer-testimonoals {
+    margin-top: 6%;
+}
+.owl-carousel .owl-item img{
+    width: auto;
+}
+#customer-testimonoals .item {
+    margin-bottom: 0px;
+    opacity: 0.2;
+    transform: scale3d(0.8, 0.8, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+#customer-testimonoals .owl-item.active.center .item {
+    opacity: 1;
+    transform: scale3d(1.0, 1.0, 1);
+}
+.owl-carousel .owl-stage-outer{
+    padding-bottom: 50px;
+}
