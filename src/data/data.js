@@ -20,15 +20,10 @@ export const data = {
                     "img": "/img/svg/Custom Machine Learning Model.svg",
                     "heading": "Custom Machine Learning Model",
                     "description": "We help business gain deep insights into their data by leveraging the power of AI and Machine Learning. By utilising powerful AWS, Amazon and Azure Cloud Frameworks, we help businesses integrate AI and ML-based functions seamlessly into everyday organisational tasks. Some of the core areas of functional evolution we delve into include pattern and anomaly detection, natural language processing, prediction and forecasting, among others."
-                },
-                {
-                    "img": "",
-                    "heading": "",
-                    "description": ""
                 }
             ],
             "case_studies": {
-                "cs_subheading": "",
+                "cs_subheading": "Few words from our customers",
                 "case_studies_data": [
                     [
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestiae blanditiis hic neque omnis? Itaque."
@@ -172,11 +167,6 @@ export const data = {
                     "img": "/img/svg/Custom IoT solution development.svg",
                     "heading": " Software and Analytics ",
                     "description": " At Shunyeka, we develop cloud native, serverless event-driven application applications. These manage data ingestion, network & security management. Create & manage secure IoT management hubs. Use predictive analytics and develop quick, actionable insights with increased efficiency. Acquire process input solutions that scale up existing architecture and use ML to detect anomalies. "
-                },
-                {
-                    "img": "/img/svg/Custom IoT solution development.svg",
-                    "heading": " Hardware and Connectivity ",
-                    "description": " Shunyeka IoT applications are designed to optimize every aspect of a company's process-from edge processing to user experience. Our IoT applications provide real time inference and actionable solutions on edge. Shunyeka cloud services further allow for in-depth analysis and storage with a high performance cloud native architecture. We customize tools for utilizing cloud computing to launch newer dimensions for increased market value and resolve customer demands with increased accuracy & speed. "
                 }
             ],
             "case_studies": {
@@ -217,8 +207,12 @@ export const data = {
                 }
             ],
             "case_studies": {
-                "cs_subheading": "",
-                "case_studies_data": []
+                "cs_subheading": "Virtual Office Software Service Provider for large global telco company has developed cloud native application with 100% AWS services in use. Customer has approached us to streamline their build, deploy process and integrate the same with security tools.",
+                "case_studies_data": [
+                    ["The cost was sky rocketing in the cloud infra.The security was a major concern and was not able to achieve regulatory compliance.System was not scalable.Frequent system downtime because of scalability and malicious attacks.Piles of infrastructure maintenance tasks."],
+                    ["Worked with the dev team in migrating app for auto scalable AWS. Automated app deployment using AWS code pipeline, code deploy, and code commit.Hardened the Infrastructure, OS and App layer security with Deep Security management.Automated monitoring and response implementation with lambda and other automation functions."],
+                    ["Cost is in control now and able to project cost correctly.The performance improvements Regulatory Compliance achieved like PCI, DSS and others.Lower costs on infrastructure and management.Clean AWS infrastructure with manageable IaC in cloud formation."],                    
+                ]
             }
         }
     ],
