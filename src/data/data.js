@@ -2,6 +2,7 @@ export const data = {
     "services": [
         {
             "heading": "AI & Machine Learning",
+            "path": "ai-machine-learning",
             "thumbnail": "/img/svg/Image Recognition.svg",
             "description": "We help business gain deep insights into their data by leveraging the power of AI and Machine Learning. By utilizing powerful AWS, Amazon and Azure Cloud Frameworks, we help businesses integrate AI and ML-based functions using seamlessly integrated MLOps into everyday organizational tasks. Some of the core areas of functional evolution we delve into include pattern and anomaly detection, natural language processing, prediction and forecasting, among others.",
             "list": [
@@ -43,7 +44,8 @@ export const data = {
         },
         {
             "heading": "Application Development and Modernization",
-            "thumbnail": "/img/svg/Application Development and Modernization.svg",
+            "path": "application-modernization",
+            "thumbnail": "/img/svg/Application Modernization.svg",
             "description": "The cloud environment is a whole new world of opportunities that also demands a form of evolution from businesses, specifically in the form of application modernization. It is time to bid farewell to the bulky application development process of old and embrace serverless development, the new cloud-native realm of application architecture and design. We at ShunyEka can enable businesses to create scalable, event-driven and agile serverless applications that are built for the cloud.",
             "list": [
                 {
@@ -93,6 +95,7 @@ export const data = {
         },
         {
             "heading": "DevXOps and Automation Services",
+            "path": "devxops-and-automation-services",
             "thumbnail": "/img/svg/devSecops3.svg",
             "description": "Application security is one of the core functions that we integrate, specifically with a focus on secure code assessment, software composition analysis, and application integration security. Moreover, we also empower businesses to take control of container security as a part of their development cycle, including container runtime security, container risk mitigation, Kubernetes security and admission and control. ShunkyEka empowers businesses to embrace the new paradigm of NoOps with our unique brand of ZeroTech capabilities, which enables businesses to utilize API-driven event-based security automation that allows for intuitive mitigation of risks as a part of the natural development cycle.",
             "list": [
@@ -129,8 +132,9 @@ export const data = {
         },
         {
             "heading": " Data Engineering and Analytics ",
+            "path": "data-engineering-and-analytics",
             "thumbnail": "/img/svg/BigData Analytics.svg",
-            "description": "",
+            "description": "One of our core service areas involves empowering businesses to take control of their data rather than losing their essence in the digital ocean of the information age. Our in-house data engineers have helped numerous businesses in streamlining their data pipelines and democratizing data-based decision systems. We can help you accelerate data analysis automation and help you engineer data workflows that are designed to reap the most benefits from the information that your organization generates.",
             "list": [
                 {
                     "img": "/img/svg/Real Time Data Analytics.svg",
@@ -160,6 +164,7 @@ export const data = {
         },
         {
             "heading": " Custom IOT Solutions ",
+            "path": "custom-iot-solutions",
             "thumbnail": "/img/svg/Custom IoT solution development.svg",
             "description": "Shunyeka IoT applications are designed to optimize every aspect of a company's process-from edge processing to user experience. Our IoT applications provide real time inference and actionable solutions on edge. Shunyeka cloud services further allow for in-depth analysis and storage with a high performance cloud native architecture. We customize tools for utilizing cloud computing to launch newer dimensions for increased market value and resolve customer demands with increased accuracy & speed.",
             "list": [
@@ -191,8 +196,9 @@ export const data = {
         },
         {
             "heading": " Cloud Security ",
+            "path": "cloud-security",
             "thumbnail": "/img/svg/Custom Machine Learning Model.svg",
-            "description": "",
+            "description": "We help business gain deep insights into their data by leveraging the power of AI and Machine Learning. By utilizing powerful AWS, Amazon and Azure Cloud Frameworks, we help businesses integrate AI and ML-based functions seamlessly into everyday organizational tasks. Some of the core areas of functional evolution we delve into include pattern and anomaly detection, natural language processing, prediction and forecasting, among others.",
             "list": [
                 {
                     "img": "/img/svg/chatbot.svg",

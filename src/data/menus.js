@@ -45,7 +45,7 @@ export const footer_menu = [
             },
             {
                 "name": "DevXOps Services",
-                "link": "devxops-services"
+                "link": "devxops-and-automation-services"
             },
             {
                 "name": "Data Engineering and Analytics",
@@ -56,8 +56,8 @@ export const footer_menu = [
                 "link": "custom-iot-solutions"
             },
             {
-                "name": "Cloud Services",
-                "link": "cloud-services"
+                "name": "Cloud Security",
+                "link": "cloud-security"
             }
         ]
     }

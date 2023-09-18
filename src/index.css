@@ -30,6 +30,7 @@
 
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
     color: #2c3d46;
+    font-family: 'Circular Std Book', sans-serif;
 }
