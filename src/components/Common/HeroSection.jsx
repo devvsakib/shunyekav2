@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 const HeroSection = ({ title }) => {
     const prevLocation = useLocation().pathname.split("/").slice(0, -1).join("/")
-    const currentPath = useLocation().pathname
+    const currentPath = useLocation().pathname.split("-").join(" ")
     return (
         <section className="bg-primaryBg py-16 w-screen mb-10">
             <div className="mt-10">
@@ -18,7 +18,6 @@ const HeroSection = ({ title }) => {
                     <div>
                         <p className="capitalize font-circularBol text-3xl mt-3">
                             {
-                                // check if path content AI capitalize, mkae it AI
                                 title || currentPath.slice(1)
                             }
                         </p>
