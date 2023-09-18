@@ -50,7 +50,7 @@ const Header = () => {
                         }
                     </div>
                 }
-                <nav className="hidden md:flex gap-5 CircularStd-Medium items-center flex-col md:flex-row">
+                <nav className="hidden md:flex gap-5 font-circularMed items-center flex-col md:flex-row">
                     {main_menu.map((item, index) => (
                         <ActiveLink links={item} key={index} />
                     ))}
@@ -68,7 +68,7 @@ const Header = () => {
                 </nav>
                 {
                     width <= 768 && isMenuOpen &&
-                    <nav className="flex absolute top-14 w-full h-screen bg-white left-0 gap-5 CircularStd-Medium pt-10 items-start px-10 flex-col md:flex-row"
+                    <nav className="flex absolute top-14 w-full h-screen bg-white left-0 gap-5 font-circularMed pt-10 items-start px-10 flex-col md:flex-row"
                     >
                         {main_menu.map((item, index) => (
                             <span onClick={e => setIsMenuOpen(!isMenuOpen)}>

@@ -7,10 +7,6 @@
     src: url('fonts/CircularStd-Book.otf');
 }
 
-.CircularStd-Book {
-    font-family: 'Circular Std Book';
-}
-
 @font-face {
     font-family: 'Circular Std Book Italic';
     src: url('fonts/CircularStd-BookItalic.otf');
