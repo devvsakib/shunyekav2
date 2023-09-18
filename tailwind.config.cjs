@@ -13,7 +13,11 @@ module.exports = {
                 "b_gray": "#C5CDD2",
             },
             fontFamily: {
-                circularMed: ['Circular Std Medium', 'sans'], // Use 'custom' as the font family name
+                circular: ['Circular Std Book', 'sans'],
+                circularMed: ['Circular Std Medium', 'sans'],
+                circularBol: ['Circular Std Bold', 'sans'],
+                circularItalic: ['Circular Std Book Italic', 'sans'],
+                gilroyBol: ['Gilroy Bold', 'sans'],
             },
         },
     },

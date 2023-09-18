@@ -4,45 +4,30 @@
 
 @font-face {
     font-family: 'Circular Std Book';
-    src: url('fonts/CircularStd-Book.otf');
+    src: url('/fonts/CircularStd-Book.otf');
 }
 
 @font-face {
     font-family: 'Circular Std Book Italic';
-    src: url('fonts/CircularStd-BookItalic.otf');
-}
-
-.CircularStd-BookItalic {
-    font-family: 'Circular Std Book Italic';
+    src: url('/fonts/CircularStd-BookItalic.otf');
 }
 
 @font-face {
     font-family: 'Circular Std Medium';
-    src: url('fonts/CircularStd-Medium.otf');
-}
-
-.CircularStd-Medium {
-    font-family: 'Circular Std Medium' !important;
+    src: url('/fonts/CircularStd-Medium.otf');
 }
 
 @font-face {
     font-family: 'Circular Std Bold';
-    src: url('fonts/CircularStd-Bold.otf');
-}
-
-.CircularStd-Bold {
-    font-family: 'Circular Std Bold';
+    src: url('/fonts/CircularStd-Bold.otf');
 }
 
 /*Gilroy fonts*/
 @font-face {
     font-family: 'Gilroy Bold';
-    src: url('fonts/Gilroy-Bold.ttf');
+    src: url('/fonts/Gilroy-Bold.ttf');
 }
 
-.Gilroy-Bold {
-    font-family: 'Gilroy Bold';
-}
 
 body {
   overflow-x: hidden;
