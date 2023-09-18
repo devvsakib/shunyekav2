@@ -31,7 +31,7 @@ const Header = () => {
         <header
             ref={navbarRef}
             className={`${isNavbarFixed ? " bg-white w-full" : " w-full"
-                } duration-300 ease-linear fixed top-0 left-0 px-5 right-0`}
+                } duration-300 ease-linear fixed top-0 left-0 px-5 right-0 z-50`}
         >
             <div className="flex flex-row justify-between items-center py-3 max-w-[1240px] mx-auto">
                 <div>

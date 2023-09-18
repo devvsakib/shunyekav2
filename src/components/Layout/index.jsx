@@ -1,6 +1,6 @@
 const Layout = ({ children }) => {
     return (
-        <main className='mx-auto px-5 md:px-0 w-full flex-1'>
+        <main className='max-w-[1240px] mx-auto  px-5 md:px-0 w-full flex-1'>
             {children}
         </main>
     )
