@@ -1,0 +1,8 @@
+.owl-carousel{
+    display: flex;
+    align-items: center !important;
+}
+.owl-stage{
+    display: flex;
+    align-items: center;
+}
