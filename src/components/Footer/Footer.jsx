@@ -44,8 +44,8 @@ const Footer = () => {
                                         <ul className="flex flex-col gap-1">
                                             {
                                                 item.links.map((sub_item, index) => (
-                                                    <li key={index}>
-                                                        <Link to={sub_item.link}>{sub_item.name}</Link>
+                                                    <li key={index} className="hover:text-secondary">
+                                                        <Link to={"/services/" +sub_item.link}>{sub_item.name}</Link>
                                                     </li>
                                                 ))
                                             }

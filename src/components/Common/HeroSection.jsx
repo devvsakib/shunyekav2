@@ -12,9 +12,11 @@ const HeroSection = ({ title }) => {
                     <div className="absolute right-10 top-10 md:-top-[1.2rem]">
                         <img className="w-3/5 ml-auto" src="/img/icons/shunyeka-sm.svg" alt="" />
                     </div>
-                    <Link to={prevLocation} className="flex items-center text-xl">
-                        <IoIosArrowBack className="text-secondary" /> <span className="font-circularMed">Back</span>
-                    </Link>
+                    <div className="w-fit">
+                        <Link to={prevLocation} className="flex items-center text-xl">
+                            <IoIosArrowBack className="text-secondary" /> <span className="font-circularMed">Back</span>
+                        </Link>
+                    </div>
                     <div>
                         <p className="capitalize font-circularBol text-3xl mt-3">
                             {
