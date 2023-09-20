@@ -3,11 +3,11 @@ import { data } from '../data/data'
 import { useEffect, useState } from "react"
 import HeroSection from "../components/Common/HeroSection"
 import Layout from "../components/Layout"
+import DevOpsSlider from "../components/Testimonials/DevOpsSlider"
 
 const Service = () => {
     const getLocation = useParams().id
     const [content, setContent] = useState(data.services.find((data) => data.path === getLocation))
-    console.log(content);
     const title = content?.heading
 
     return (
@@ -46,17 +46,21 @@ const Service = () => {
                     <p className="text-center text-gray mt-2">
                         {content?.case_studies?.cs_subheading}
                     </p>
-                    <div className="grid md:grid-cols-2 gap-10 mt-5">
-                        {
-                            content?.case_studies?.case_studies_data?.map((item, index) => (
+
+                    {
+                        title == "DevXOps and Automation Services" ?
+                            <DevOpsSlider />
+                            :
+                            <div className="grid md:grid-cols-2 gap-10 mt-5">
+                           content?.case_studies?.case_studies_data?.map((item, index) => (
                                 <div key={index} className="p-5 h-56 shadow-xl rounded-xl bg-white mx-auto border border-gray/10">
                                     <p className="text-gray mt-2">
                                         {item}
                                     </p>
                                 </div>
-                            ))
-                        }
-                    </div>
+                                ))
+                            </div>
+                    }
                 </section>
             </Layout >
         </>
