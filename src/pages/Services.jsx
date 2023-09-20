@@ -2,17 +2,13 @@ import { Link } from "react-router-dom"
 import HeroSection from "../components/Common/HeroSection"
 import Layout from "../components/Layout"
 import { data } from '../data/data'
+import HeadingSubheading from "../components/Common/HeadingSubheading"
 const Services = () => {
     return (
         <>
             <HeroSection from="/" />
             <Layout>
-                <div className="text-center max-w-[900px] mx-auto">
-                    <h3 className="text-4xl font-circularBol">Automation in CloudOps, DevOps and SecOps</h3>
-                    <p className="text-gray mt-2">
-                        ShunyEka’s 24/7 AWS Cloud Managed Services allows you to focus on your business. Our highly qualified team of SysOps & DevOps Engineers take care of high availability, scalability and security for your Infrastructure and Applications.
-                    </p>
-                </div>
+                <HeadingSubheading heading={"Automation in CloudOps, DevOps and SecOps"} subheading={"ShunyEka’s 24/7 AWS Cloud Managed Services allows you to focus on your business. Our highly qualified team of SysOps & DevOps Engineers take care of high availability, scalability and security for your Infrastructure and Applications."} />
                 {/* services */}
                 <div>
                     <div className="grid md:grid-cols-2 gap-5 mt-12">

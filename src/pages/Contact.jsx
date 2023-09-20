@@ -3,22 +3,19 @@ import HeroSection from '../components/Common/HeroSection'
 import Layout from '../components/Layout'
 import ContactFrom from '../components/Form/ContactForm'
 import { Toaster } from 'react-hot-toast'
+import HeadingSubheading from '../components/Common/HeadingSubheading'
 
 const Contact = () => {
     return (
         <>
-            <HeroSection from={"/"}/>
+            <HeroSection from={"/"} />
             <Toaster
-                  position="top-center"
-                  reverseOrder={false}
-                  gutter={8}
+                position="top-center"
+                reverseOrder={false}
+                gutter={8}
             />
             <Layout>
-                {/* form */}
-                <div className=' my-20 text-center'>
-                    <h2 className='text-3xl font-semibold'>Contact Us</h2>
-                    <p className='text-gray'> For support or any questions related to your business needs submit your requests and queries here. </p>
-                </div>
+                <HeadingSubheading heading={"Contact Us"} subheading={"For support or any questions related to your business needs submit your requests and queries here."} />
                 <section className='grid md:grid-cols-2 mb-20 gap-12'>
                     <div>
                         <ContactFrom />
