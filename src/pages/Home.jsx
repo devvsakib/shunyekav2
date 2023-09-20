@@ -18,6 +18,9 @@ const Home = () => {
         <>
             <section className="about-hero relative py-32">
                 <Layout>
+                        <div className="absolute right-10 top-10 md:-top-[1.2rem]">
+                            <img className="w-10/12 ml-auto" src="/img/icons/shunyeka-lg.svg" alt="" />
+                        </div>
                     <div className="grid md:grid-cols-2 gap-10">
                         {/* left content*/}
                         <div className="relative">
