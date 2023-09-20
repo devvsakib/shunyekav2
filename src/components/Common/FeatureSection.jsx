@@ -1,4 +1,7 @@
-const FeatureSection = ({ list }) => {
+import { Link } from "react-router-dom"
+import SEButton from "./SEButton"
+
+const FeatureSection = ({ list, button }) => {
     return (
         <section>
             <div className='mb-10 mt-16'>
@@ -26,6 +29,10 @@ const FeatureSection = ({ list }) => {
                                     }
                                 </ul>
                             </div>
+                            {
+                                button &&
+                                <SEButton text="Read More" path="/services" />
+                            }
                         </div>
                     </div>
                 </div>
