@@ -34,3 +34,7 @@ body {
     color: #2c3d46;
     font-family: 'Circular Std Book', sans-serif;
 }
+
+img{
+    max-width: 100%;
+}
