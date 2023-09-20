@@ -30,8 +30,8 @@ const Header = () => {
 
         <header
             ref={navbarRef}
-            className={` ${isNavbarFixed ? "bg-white" : (isMenuOpen && width <= 768) ? "bg-white" : "bg-opacity-80 backdrop-blur-lg"}
-                } duration-300 ease-linear fixed top-0 left-0 px-5 right-0 z-50`}
+            className={` ${isNavbarFixed ? "bg-white shadow-lg" : (isMenuOpen && width <= 768) ? "bg-white" : "bg-opacity-80 backdrop-blur-lg"}
+                } duration-300 ease-linear fixed top-0 left-0  px-5 right-0 z-50`}
         >
             <div className="flex flex-row justify-between items-center py-3 max-w-[1240px] mx-auto">
                 <div>
