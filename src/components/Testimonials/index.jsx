@@ -30,7 +30,7 @@ const Testimonials = () => {
                 data?.testimonials?.map((item, idx) => (
                     <div key={idx} className="item  mx-auto grid gap-5 w-auto md:w-[500px] bg-white p-6 px-10 rounded-2xl shadow-lg duration-300 ease-linear pb-10">
                         <img className="w-[50px]" src="/img/icons/quotation-mark.svg" alt="quote" />
-                        <p>
+                        <p className='font-circularItalic'>
                             {item?.testimonial}
                         </p>
                         <div>
