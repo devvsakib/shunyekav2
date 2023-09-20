@@ -51,7 +51,7 @@ const Home = () => {
                             </div>
                             <div className="bg-white shadow-lg rounded-lg grid place-items-center text-center p-5">
                                 <div className="service-box grid justify-center items-center">
-                                    <img src="/img/svg/Application Modernization.svg" alt="icons" className="max-w-[100%] mx-auto" />
+                                    <img style={{width: "130px"}} src="/img/svg/Application Modernization.svg" alt="icons" className="max-w-[100%] mx-auto" />
                                     <h5>
                                         Application Modernization
                                     </h5>
@@ -59,7 +59,7 @@ const Home = () => {
                             </div>
                             <div className="bg-white shadow-lg rounded-lg grid place-items-center text-center p-5 mb-10">
                                 <div className="service-box grid justify-center items-center">
-                                    <img src="/img/svg/Serverless Application.svg" alt="icons" className="max-w-[100%] mx-auto" />
+                                    <img style={{width: "130px"}} src="/img/svg/Serverless Application.svg" alt="icons" className="max-w-[100%] mx-auto" />
                                     <h5>
                                         Serverless Application
                                     </h5>
