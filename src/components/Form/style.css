@@ -1,0 +1,5 @@
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 2px #62BA9E;
+    outline: none;
+}
