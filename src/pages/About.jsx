@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import { Helmet } from 'react-helmet'
 import { seo } from '../meta/aboutSEO'
 import HeroSection from '../components/Common/HeroSection'
+import FeatureSection from '../components/Common/FeatureSection'
 import Testimonials from '../components/Testimonials'
 import Client from '../components/Carousel/Client'
 
@@ -23,36 +24,7 @@ const About = () => {
             <HeroSection from="/" />
             <Layout>
                 {/* about us */}
-                <div className='mb-10 mt-16'>
-                    <div className='w-full pb-10'>
-                        <div className='grid md:grid-cols-3 items- justify-center '>
-                            <div className='w-full md:w-1/2 mb-5 '>
-                                <img src='/img/icons/shunyeka-color.svg' alt='about us' className='w-full' />
-                            </div>
-                            <div className='col-span-2'>
-                                <div className=' mb-5'>
-                                    <h4 className='text-4xl font-circularBol mb-3'> Automation in CloudOps, DevOps and SecOps </h4>
-                                    <p className='text-gray'>ShunyEka offers Cloud Managed Services, Cloud Automation, Cloud Security, Serverless Application Development, Cloud Migration, DevOps and DevSecOps.</p>
-                                </div>
-                                <div>
-                                    <ul className='grid gap-5'>
-
-                                        {
-                                            list.map(item => (
-                                                <li className='flex gap-5 items-start'>
-                                                    <img src="/img/icons/arrow-correct.svg" alt="" />
-                                                    <p>
-                                                        {item}
-                                                    </p>
-                                                </li>
-                                            ))
-                                        }
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <FeatureSection list={list} />
 
             </Layout>
             {/* testimonial */}
