@@ -21,7 +21,8 @@ const Services = () => {
                                     <div className="mt-5">
                                         <h3 className="text-xl md:text-3xl font-circularBol">{item.heading == "Application Development and Modernization" ? "Application Modernization" : item.heading}</h3>
                                         <p className="text-gray mt-2">
-                                            {item.description.slice(0, 150) + '... Read More'}
+                                            {item.description.slice(0, 150) + "... "}
+                                            <span className="text-secondary">Read More</span>
                                         </p>
                                     </div>
                                 </Link>
