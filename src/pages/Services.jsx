@@ -5,7 +5,7 @@ import { data } from '../data/data'
 const Services = () => {
     return (
         <>
-            <HeroSection />
+            <HeroSection from="/" />
             <Layout>
                 <div className="text-center max-w-[900px] mx-auto">
                     <h3 className="text-4xl font-circularBol">Automation in CloudOps, DevOps and SecOps</h3>

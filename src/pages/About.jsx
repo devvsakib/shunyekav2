@@ -20,7 +20,7 @@ const About = () => {
                 <meta name="description" content={seo.description} />
                 <meta name="keywords" content={seo.keywords} />
             </Helmet>
-            <HeroSection />
+            <HeroSection from="/" />
             <Layout>
                 {/* about us */}
                 <div className='mb-10 mt-16'>

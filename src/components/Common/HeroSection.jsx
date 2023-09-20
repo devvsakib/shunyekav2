@@ -2,7 +2,7 @@ import { IoIosArrowBack } from "react-icons/io"
 import Layout from "../Layout"
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
-const HeroSection = ({ title }) => {
+const HeroSection = ({ title, from }) => {
     const prevLocation = useLocation().pathname.split("/").slice(0, -1).join("/")
     const currentPath = useLocation().pathname.split("-").join(" ")
     return (
@@ -13,7 +13,7 @@ const HeroSection = ({ title }) => {
                         <img className="w-3/5 ml-auto" src="/img/icons/shunyeka-sm.svg" alt="" />
                     </div>
                     <div className="w-fit">
-                        <Link to={prevLocation} className="flex items-center text-xl">
+                        <Link to={from ?? prevLocation} className="flex items-center text-xl">
                             <IoIosArrowBack className="text-secondary" /> <span className="font-circularMed">Back</span>
                         </Link>
                     </div>
