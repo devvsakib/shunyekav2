@@ -5,13 +5,13 @@ import { IoCall, IoClose } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 import ActiveLink from "./ActiveLink";
 import useWindowSize from "../../hooks/useWindowSize";
+import { motion } from "framer-motion"
 
 const Header = () => {
     const [isNavbarFixed, setIsNavbarFixed] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navbarRef = useRef();
     const { width } = useWindowSize();
-    console.log(width);
     useEffect(() => {
         const handleScroll = () => {
             const pageYOffset = window.scrollY > 45;
@@ -30,7 +30,7 @@ const Header = () => {
 
         <header
             ref={navbarRef}
-            className={`${isNavbarFixed ? " bg-white w-full" : " w-full"
+            className={` ${isNavbarFixed ? "bg-white" : (isMenuOpen && width <= 768) ? "bg-white" : "bg-opacity-80 backdrop-blur-lg"}
                 } duration-300 ease-linear fixed top-0 left-0 px-5 right-0 z-50`}
         >
             <div className="flex flex-row justify-between items-center py-3 max-w-[1240px] mx-auto">
@@ -40,8 +40,7 @@ const Header = () => {
                     </Link>
                 </div>
                 {
-                    width <= 768 &&
-                    <div>
+                    width <= 768 && <div>
                         {
                             isMenuOpen ?
                                 <IoClose onClick={e => setIsMenuOpen(!isMenuOpen)} className="text-3xl cursor-pointer text-primary" />
@@ -67,11 +66,21 @@ const Header = () => {
                     </Link>
                 </nav>
                 {
-                    width <= 768 && isMenuOpen &&
-                    <nav className="flex absolute top-14 w-full h-screen bg-white left-0 gap-5 font-circularMed pt-10 items-start px-10 flex-col md:flex-row"
+                    width <= 768 && 
+
+                    <motion.nav
+                        variants={{
+                            hidden: { opacity: 0, height: 0, width: "100vw" },
+                            visible: { opacity: 1, height: "100vh", }
+                        }}
+                        initial="hidden"
+                        animate= {isMenuOpen ? "visible" : "hidden"}
+                        transition={{ duration: 0.3 }}
+                        className={`flex absolute top-12 w-full h-screen bg-white left-0 gap-5 
+                                    font-circularMed pt-10 items-start px-10 flex-col md:flex-row`}
                     >
                         {main_menu.map((item, index) => (
-                            <span onClick={e => setIsMenuOpen(!isMenuOpen)}>
+                            <span key={index} onClick={e => setIsMenuOpen(!isMenuOpen)}>
                                 <ActiveLink links={item} key={index} />
                             </span>
                         ))}
@@ -87,7 +96,7 @@ const Header = () => {
                         >
                             <p>Contact Us</p>
                         </Link>
-                    </nav>
+                    </motion.nav>
                 }
             </div>
 

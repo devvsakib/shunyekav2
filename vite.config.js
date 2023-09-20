@@ -3,4 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     plugins: [react()],
+    optimizeDeps: {
+        exclude: ['framer-motion'], // Exclude framer-motion from optimization
+      },
 });
