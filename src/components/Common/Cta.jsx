@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import Layout from "../Layout"
+import SEButton from "./SEButton"
 
 const Cta = () => {
     return (
@@ -10,9 +11,10 @@ const Cta = () => {
                         <h3 className="text-4xl text-black font-circularBol">For support or any questions</h3>
                         <p className="text-lg mt-2">Related to your business needs submit your requests and queries here.</p>
                     </div>
-                    <div className="text-xl">
+                    <SEButton text="Contact Us" path="/contact-us" />
+                    {/* <div className="text-xl">
                         <Link to="/contact-us" className="bg-secondary text-white rounded-md px-10 py-5">Contact Us</Link>
-                    </div>
+                    </div> */}
                 </div>
             </Layout>
         </section>

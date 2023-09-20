@@ -6,8 +6,8 @@ const FeatureSection = ({ list, button }) => {
         <section>
             <div className='mb-10 mt-16'>
                 <div className='w-full pb-10'>
-                    <div className='grid md:grid-cols-3 items- justify-center '>
-                        <div className='w-full md:w-1/2 mb-5 '>
+                    <div className='grid md:grid-cols-3 justify-center '>
+                        <div className='col-span-2 md:col-span-1 mx-auto md:mx-0 w-1/2 mb-5 '>
                             <img src='/img/icons/shunyeka-color.svg' alt='about us' className='w-full' />
                         </div>
                         <div className='col-span-2'>
