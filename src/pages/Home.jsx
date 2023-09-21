@@ -80,7 +80,7 @@ const Home = () => {
                 <FeatureSection list={list} button={true} />
                 {/* our services */}
                 <div className="my-[10rem]">
-                    <HeadingSubheading heading={"Automation in CloudOps, DevOps and SecOps"} subheading={"ShunyEka’s 24/7 AWS Cloud Managed Services allows you to focus on your business. Our highly qualified team of SysOps & DevOps Engineers take care of high availability, scalability and security for your Infrastructure and Applications."} />
+                    <HeadingSubheading heading={"Our Services"} subheading={"Our aim is to cater to the needs and demands of your cloud architecture so that you can focus on growing and expanding your business. Some of the core services that we offer in this realm include:"} />
                     {/* services */}
                     <div className="grid md:grid-cols-2 gap-5 mt-12">
                         {
