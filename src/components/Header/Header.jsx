@@ -77,7 +77,7 @@ const Header = () => {
                         animate= {isMenuOpen ? "visible" : "hidden"}
                         transition={{ duration: 0.3 }}
                         className={`flex absolute top-12 w-full h-screen bg-white left-0 gap-5 
-                                    font-circularMed pt-10 items-start px-10 flex-col md:flex-row`}
+                                    font-circularMed pt-10 items-start px-5 md:px-10 flex-col md:flex-row`}
                     >
                         {main_menu.map((item, index) => (
                             <span key={index} onClick={e => setIsMenuOpen(!isMenuOpen)}>
