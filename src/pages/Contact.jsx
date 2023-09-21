@@ -4,10 +4,13 @@ import Layout from '../components/Layout'
 import ContactFrom from '../components/Form/ContactForm'
 import { Toaster } from 'react-hot-toast'
 import HeadingSubheading from '../components/Common/HeadingSubheading'
+import MetaContainer from '../meta/MetaContainer'
+import { seo } from '../meta/seo'
 
 const Contact = () => {
     return (
         <>
+            <MetaContainer title={"Contact Us"} seo={seo.contact} />
             <HeroSection from={"/"} />
             <Toaster
                 position="top-center"

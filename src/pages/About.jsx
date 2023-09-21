@@ -1,10 +1,11 @@
 import Layout from '../components/Layout'
 import { Helmet } from 'react-helmet'
-import { seo } from '../meta/aboutSEO'
+import { seo } from '../meta/seo'
 import HeroSection from '../components/Common/HeroSection'
 import FeatureSection from '../components/Common/FeatureSection'
 import Testimonials from '../components/Testimonials'
 import Client from '../components/Carousel/Client'
+import MetaContainer from '../meta/MetaContainer'
 
 const About = () => {
     const list = [
@@ -16,11 +17,7 @@ const About = () => {
     return (
         <>
             {/* seo */}
-            <Helmet>
-                <title>{seo.title}</title>
-                <meta name="description" content={seo.description} />
-                <meta name="keywords" content={seo.keywords} />
-            </Helmet>
+            <MetaContainer title={"About Us"} seo={seo.about} />
             <HeroSection from="/" />
             <Layout>
                 {/* about us */}

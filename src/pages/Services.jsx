@@ -3,9 +3,16 @@ import HeroSection from "../components/Common/HeroSection"
 import Layout from "../components/Layout"
 import { data } from '../data/data'
 import HeadingSubheading from "../components/Common/HeadingSubheading"
+import MetaContainer from "../meta/MetaContainer"
+import { seo } from "../meta/seo"
+
 const Services = () => {
     return (
         <>
+        <MetaContainer
+            title={"Services"}
+            seo={seo.services}
+        />
             <HeroSection from="/" />
             <Layout>
                 <HeadingSubheading heading={"Automation in CloudOps, DevOps and SecOps"} subheading={"ShunyEka’s 24/7 AWS Cloud Managed Services allows you to focus on your business. Our highly qualified team of SysOps & DevOps Engineers take care of high availability, scalability and security for your Infrastructure and Applications."} />

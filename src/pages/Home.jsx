@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import FeatureSection from "../components/Common/FeatureSection";
-import { seo } from "../meta/aboutSEO";
+import { seo } from "../meta/seo";
 import { data } from '../data/data'
 import HeadingSubheading from "../components/Common/HeadingSubheading"
 import SEButton from "../components/Common/SEButton";
 import Testimonials from "../components/Testimonials";
 import Client from "../components/Carousel/Client";
+import { Helmet } from 'react-helmet'
+import MetaContainer from "../meta/MetaContainer";
+
 const list = [
     "Visibility: Experience the power of cloud orchestration for data monitoring and real-time analytics",
     "Strength: Enhance decision-making potential through advanced AI, Machine Learning, and IOT frameworks",
@@ -16,11 +19,15 @@ const list = [
 const Home = () => {
     return (
         <>
+            <MetaContainer
+                title={"Home"}
+                seo={seo.home}
+            />
             <section className="about-hero relative py-32">
                 <Layout>
-                        <div className="absolute right-10 top-10 md:-top-[1.2rem]">
-                            <img className="w-10/12 ml-auto" src="/img/icons/shunyeka-lg.svg" alt="" />
-                        </div>
+                    <div className="absolute right-10 top-10 md:-top-[1.2rem]">
+                        <img className="w-10/12 ml-auto" src="/img/icons/shunyeka-lg.svg" alt="" />
+                    </div>
                     <div className="grid md:grid-cols-2 gap-10">
                         {/* left content*/}
                         <div className="relative">
@@ -51,7 +58,7 @@ const Home = () => {
                             </div>
                             <div className="bg-white shadow-lg rounded-lg grid place-items-center text-center p-5">
                                 <div className="service-box grid justify-center items-center">
-                                    <img style={{width: "130px"}} src="/img/svg/Application Modernization.svg" alt="icons" className="max-w-[100%] mx-auto" />
+                                    <img style={{ width: "130px" }} src="/img/svg/Application Modernization.svg" alt="icons" className="max-w-[100%] mx-auto" />
                                     <h5>
                                         Application Modernization
                                     </h5>
@@ -59,7 +66,7 @@ const Home = () => {
                             </div>
                             <div className="bg-white shadow-lg rounded-lg grid place-items-center text-center p-5 mb-10">
                                 <div className="service-box grid justify-center items-center">
-                                    <img style={{width: "130px"}} src="/img/svg/Serverless Application.svg" alt="icons" className="max-w-[100%] mx-auto" />
+                                    <img style={{ width: "130px" }} src="/img/svg/Serverless Application.svg" alt="icons" className="max-w-[100%] mx-auto" />
                                     <h5>
                                         Serverless Application
                                     </h5>

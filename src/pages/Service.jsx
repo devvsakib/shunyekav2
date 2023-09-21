@@ -1,9 +1,11 @@
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { data } from '../data/data'
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import HeroSection from "../components/Common/HeroSection"
 import Layout from "../components/Layout"
 import DevOpsSlider from "../components/Testimonials/DevOpsSlider"
+import { seo } from "../meta/seo"
+import MetaContainer from "../meta/MetaContainer"
 
 const Service = () => {
     const getLocation = useParams().id
@@ -12,6 +14,7 @@ const Service = () => {
 
     return (
         <>
+            <MetaContainer title={title} seo={seo[title]} />
             <HeroSection title={title} />
             <Layout>
                 <div className="text-center max-w-[900px] mx-auto mt-20">
@@ -52,13 +55,13 @@ const Service = () => {
                             <DevOpsSlider />
                             :
                             <div className="grid md:grid-cols-2 gap-10 mt-5">
-                           content?.case_studies?.case_studies_data?.map((item, index) => (
-                                <div key={index} className="p-5 h-56 shadow-xl rounded-xl bg-white mx-auto border border-gray/10">
-                                    <p className="text-gray mt-2">
-                                        {item}
-                                    </p>
-                                </div>
-                                ))
+                                {content?.case_studies?.case_studies_data?.map((item, index) => (
+                                    <div key={index} className="p-5 h-56 shadow-xl rounded-xl bg-white mx-auto border border-gray/10">
+                                        <p className="text-gray mt-2">
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                     }
                 </section>
