@@ -32,6 +32,11 @@ const ContactForm = () => {
             toast.error('Phone is required')
             return;
         }
+        // check if phone is valid
+        if (formData.phone.length < 7 || formData.phone.length > 15 || isNaN(formData.phone)) {
+            toast.error('Please enter a valid phone number')
+            return;
+        }
 
         if (!formData.email.match(emailRegex)) {
             toast.error('Please enter a valid email')
@@ -51,6 +56,12 @@ const ContactForm = () => {
             const response = await axios.post('https://api.autobot.live/contactus/send', formData);
             if (response.data.success) {
                 toast.success('Thank you for contacting us. We will get back to you ASAP.');
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    message: ''
+                });
             } else {
                 toast.error('Something went wrong.');
             }
