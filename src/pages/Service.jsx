@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom"
+import { Navigate, useNavigate, useParams } from "react-router-dom"
 import { data } from '../data/data'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import HeroSection from "../components/Common/HeroSection"
 import Layout from "../components/Layout"
 import DevOpsSlider from "../components/Testimonials/DevOpsSlider"
@@ -8,10 +8,22 @@ import { seo } from "../meta/seo"
 import MetaContainer from "../meta/MetaContainer"
 
 const Service = () => {
+    const navigate = useNavigate();
     const getLocation = useParams().id
-    const [content, setContent] = useState(data.services.find((data) => data.path === getLocation))
-    const title = content?.heading
+    const [content, setContent] = useState(data.services.find((data) => data.path === getLocation));
+    const title = content?.heading;
 
+    useEffect(() => {
+        const selectedContent = data.services.find((data) => data.path === getLocation);
+        setContent(selectedContent);
+        if (!selectedContent) {
+            navigate("/services");
+        }
+    }, [getLocation, navigate]);
+
+    if (!content) {
+        return null;
+    }
     return (
         <>
             <MetaContainer title={title} seo={seo[title]} />
